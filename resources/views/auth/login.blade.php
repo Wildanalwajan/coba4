@@ -6,13 +6,17 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            background-image: url(assets/kain.jpg);
+        }
+    </style>
 </head>
 <body class="flex items-center justify-center h-screen bg-cover bg-center">
-    <div class="flex flex-col md:flex-row w-full max-w-5xl shadow-lg rounded-lg overflow-hidden blur-xs">
+    <div class="flex justify-center w-full max-w-sm md:max-w-5xl shadow-lg rounded-lg overflow-hidden blur-ld">
         @if(session('failed'))
             <div class="bg-red-500 text-white p-3 rounded mb-3">{{ session('failed') }}</div>
         @endif
-        <h3 class="text-2xl font-bold mb-4">Login lur</h3>
         @if($errors->any())
             <div class="bg-red-100 text-red-600 p-3 rounded mb-3">
                 <ul>
@@ -22,7 +26,7 @@
                 </ul>
             </div>
         @endif
-        <form action="{{ route('login.proses') }}" method="POST" class="space-y-4 bg-[url('/assets/kain.jpg')">
+        <form action="{{ route('login.proses') }}" method="POST" class="space-y-4 font-bold text-white">
             @csrf
             <div>
                 <label for="email" class="block font-medium">Email:</label>

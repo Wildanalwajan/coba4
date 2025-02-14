@@ -6,13 +6,17 @@
         <title>Register Page</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" />
         <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <style>
+            body {
+                background-image: url(assets/kain.jpg);
+            }
+        </style>
     </head>
-    <body class="flex items-center justify-center h-screen bg-gray-100">
-        <div class="flex flex-col md:flex-row w-full max-w-5xl shadow-lg rounded-lg overflow-hidden">
+    <body class="flex items-center justify-center h-screen bg-gray-100 bg-cover bg-center text-white">
+        <div class="flex w-full max-w-sm md:max-w-5xl shadow-lg rounded-lg overflow-hidden justify-center font-bold">
             @if(session('failed'))
                 <div class="bg-red-500 text-white p-3 rounded mb-3">{{ session('failed') }}</div>
             @endif
-            <h3 class="text-2xl font-bold mb-4">Register lur</h3>
             @if($errors->any())
                 <div class="bg-red-100 text-red-600 p-3 rounded mb-3">
                     <ul>
