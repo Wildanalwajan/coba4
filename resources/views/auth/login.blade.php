@@ -8,12 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
     <style>
         body {
-            background-image: url(assets/kain.jpg);
+            background-image: url(assets/26a02a71-bb9b-41a0-829c-4c9e35b7f8b2.jpg);
         }
     </style>
 </head>
-<body class="flex items-center justify-center h-screen bg-cover bg-center">
-    <div class="flex justify-center w-full max-w-sm md:max-w-5xl shadow-lg rounded-lg overflow-hidden blur-ld">
+<body class="flex items-center justify-center h-screen bg-cover bg-center blur-ld">
+    <div class="flex justify-center w-full max-w-sm md:max-w-5xl shadow-lg rounded-lg overflow-hidden">
         @if(session('failed'))
             <div class="bg-red-500 text-white p-3 rounded mb-3">{{ session('failed') }}</div>
         @endif
@@ -37,7 +37,6 @@
                 <input type="password" id="password" name="password" required class="w-full p-2 border rounded">
             </div>
             <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Daftar</button>
-            <button type="reset" id="btnreset" class="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600">Reset</button>
             <p class="text-center">Doesn't have an account? Let's go <a href="{{ route('register') }}" class="text-blue-500">Sign Up</a> dulu yukk!</p>
         </form>
     </div>

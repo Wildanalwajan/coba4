@@ -8,7 +8,7 @@
         <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
         <style>
             body {
-                background-image: url(assets/kain.jpg);
+                background-image: url(assets/26a02a71-bb9b-41a0-829c-4c9e35b7f8b2.jpg);
             }
         </style>
     </head>
@@ -45,7 +45,6 @@
                     <input type="number" id="phone_number" name="phone_number" required class="w-full p-2 border rounded">
                 </div>
                 <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Daftar</button>
-                <button type="reset" id="btnreset" class="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600">Reset</button>
                 <p class="text-center">Already have an account? Let's go <a href="{{ route('login') }}" class="text-blue-500">Login</a> bro, hayukk!</p>
             </form>
         </div>
