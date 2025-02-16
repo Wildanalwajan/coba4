@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function(){
     return view('landing');
@@ -19,6 +20,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 // Dashboard Admin (Hanya admin)
 Route::middleware(['ceklevel:admin'])->group(function () {
     Route::get('/admin', [AuthController::class, 'admindashboard'])->name('admin.dashboard');
+        // Tambahkan Route CRUD Produk...
 });
 
 // Dashboard User (Hanya user)
