@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', function(){
     return view('landing');
 });
+
+
 
 // Halaman Login & Register
 Route::get('/register', [AuthController::class, 'register'])->name('register');
@@ -21,9 +24,15 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware(['ceklevel:admin'])->group(function () {
     Route::get('/admin', [AuthController::class, 'admindashboard'])->name('admin.dashboard');
         // Tambahkan Route CRUD Produk...
+    Route::get('/admin/products', function () {
+        return view('admin.products');  });
 });
+
 
 // Dashboard User (Hanya user)
 Route::middleware(['ceklevel:user'])->group(function () {
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 });
+
+
+Route::resource('products', ProductController::class);

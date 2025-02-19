@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('phone_number')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('nohp')->nullable();
             $table->string('level')->default('user');
             $table->timestamps();
         });
